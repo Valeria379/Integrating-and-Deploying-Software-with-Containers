@@ -1,0 +1,8 @@
+# Используем официальный образ Apache 
+FROM httpd:2.4
+
+# Копируем HTML-файл в директорию, обслуживаемую Apache
+COPY ./index.html /usr/local/apache2/htdocs/
+
+# Указываем, что контейнер будет слушать на порту 80
+EXPOSE 80
